@@ -16,7 +16,7 @@ class WordPuzzle {
             this.status = 'playing'
         }
     }
-    getStatusMessage() {
+    get statusMessage() {
         if (this.status === 'playing') {
             return `Guesses left: ${this.remainingGuesses}`
         } else if (this.status === 'failed') {
@@ -25,7 +25,7 @@ class WordPuzzle {
             return 'Great work! You guessed the work.'
         }
     }
-    getPuzzle() {
+    get puzzle() {
         let puzzle = ''
 
         this.word.forEach((letter) => {
